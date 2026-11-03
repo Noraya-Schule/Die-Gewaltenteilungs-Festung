@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <!-- Custom PreHead code is injected here -->
+    
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta charset="utf-8"/>
+
+        <!-- Builtin injector for disabling cache -->
+        <meta http-equiv="pragma" content="no-cache"/>
+
+        <!-- Set the title bar of the page -->
+        <title>Die Gewaltenteilungs-Festung</title>
+
+        <!-- Custom PreStyle code is injected here -->
+        
+
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+                background: #000;
+                color: #cccccc;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+
+            canvas {
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                width: 100%;
+                height: 100%;
+            }
+            :-webkit-full-screen {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Custom Runner Styles */
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color:#00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button {
+                float: right;
+            }
+            div.gm4html5_login_button {
+                float: left;
+            }
+            div.gm4html5_login_header {
+                text-align: center;
+            }
+            /* END - Custom Runner Styles */
+            
+
+            /* Hinweis: Handy drehen */
+            #drehen { display:none; position:fixed; inset:0; z-index:1000; background:#0f1722; color:#e8edf4;
+                      font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; text-align:center;
+                      flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:24px; }
+            #drehen svg { animation: drehen 2.4s ease-in-out infinite; }
+            @keyframes drehen { 0%,25% { transform:rotate(0deg); } 55%,100% { transform:rotate(-90deg); } }
+            #drehen p { margin:0; font-size:1.25rem; line-height:1.4; max-width:22ch; }
+            #drehen small { color:#a7b3c4; font-size:.95rem; }
+            @media (orientation: portrait) and (pointer: coarse) { #drehen { display:flex; } }
+            /* Im Vollbild die Zeichenfläche NICHT strecken (sonst stimmen die Touch-Punkte nicht mehr) */
+            :-webkit-full-screen #canvas, :fullscreen #canvas { width:auto !important; height:auto !important; }
+            :-webkit-full-screen, :fullscreen { width:auto !important; height:auto !important; background:#000; }
+            /* Hinweis: Handy wird nicht unterstützt */
+            #handy { display:none; position:fixed; inset:0; z-index:1001; background:#0f1722; color:#e8edf4;
+                     font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; text-align:center;
+                     flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:24px; }
+            html.ist-handy #handy { display:flex; }
+            html.ist-handy #drehen { display:none; }
+            #handy p { margin:0; font-size:1.2rem; line-height:1.45; max-width:30ch; }
+            #handy small { color:#a7b3c4; font-size:.95rem; max-width:34ch; line-height:1.4; }
+            #handy a, #handy button { font:inherit; font-size:1rem; border-radius:10px; padding:10px 18px; cursor:pointer; }
+            #handy a { background:#5fd38a; color:#0c1420; font-weight:700; text-decoration:none; }
+            #handy button { background:none; border:1px solid #2c3a4f; color:#a7b3c4; }
+        </style>
+
+        <!-- Custom PostStyle code is injected here -->
+        
+
+        <!-- Builtin injector for injecting flurry analytics code -->
+        
+    </head>
+
+    <!-- Custom PostHead code is injected here -->
+    
+
+    <!-- Custom PreBody code is injected here -->
+    
+
+    <body>
+        <!-- Custom BodyStart code is injected here -->
+        
+
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            
+            <!-- Builtin injector for splash screen -->
+            
+
+            <!-- Custom PreCanvas code is injected here -->
+            
+
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="1344" height="768" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+                
+                <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+            
+            <!-- Custom PostCanvas code is injected here -->
+            
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="html5game/GewaltenFestung.js?cachebust=1793719939"></script>
+
+        <!-- Builtin injector for injecting runner path -->
+        
+
+        <script>window.onload = GameMaker_Init;</script>
+
+        <!-- Builtin injector for injecting google analytics code -->
+        
+
+        <!-- Custom BodyEnd code is injected here -->
+        
+        <div id="drehen" role="alert">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" stroke="#5fd38a" stroke-width="5" stroke-linejoin="round" aria-hidden="true"><rect x="27" y="8" width="36" height="74" rx="7"/><line x1="40" y1="72" x2="50" y2="72"/></svg>
+            <p>Bitte dreh dein Gerät quer.</p>
+            <small>Die Gewaltenteilungs-Festung wird im Querformat gespielt.</small>
+        </div>
+        <div id="handy" role="alert">
+            <svg width="84" height="70" viewBox="0 0 84 70" fill="none" stroke="#5fd38a" stroke-width="4" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="76" height="54" rx="6"/><line x1="36" y1="50" x2="48" y2="50"/></svg>
+            <p>Die Gewaltenteilungs-Festung ist für das iPad und den PC gemacht.</p>
+            <small>Auf dem Handy ist der Bildschirm zu klein, Texte und Rätsel sind dort kaum zu erkennen.</small>
+            <a href="../">Zurück zu den Lernspielen</a>
+            <button type="button" id="trotzdem">Trotzdem spielen</button>
+        </div>
+        <script>
+        // Handy erkennen: Touch-Gerät mit kleinem Bildschirm (iPads haben mindestens 744 Punkte Breite)
+        (function () {
+            try {
+                var kurz = Math.min(screen.width, screen.height);
+                if (window.matchMedia('(pointer: coarse)').matches && kurz < 600) document.documentElement.classList.add('ist-handy');
+            } catch (e) {}
+            // "Trotzdem spielen": Hinweis schließen und (wo möglich, z. B. Android) Vollbild im Querformat
+            document.getElementById('trotzdem').addEventListener('click', function () {
+                document.documentElement.classList.remove('ist-handy');
+                try {
+                    var el = document.documentElement;
+                    var anf = el.requestFullscreen ? el.requestFullscreen({ navigationUI: 'hide' })
+                            : (el.webkitRequestFullscreen ? el.webkitRequestFullscreen() : null);
+                    Promise.resolve(anf).then(function () {
+                        if (screen.orientation && screen.orientation.lock) return screen.orientation.lock('landscape');
+                    }).catch(function () {});
+                } catch (e) {}
+            });
+        })();
+        </script>
+    </body>
+
+    <!-- Custom PostBody code is injected here -->
+    
+</html>
